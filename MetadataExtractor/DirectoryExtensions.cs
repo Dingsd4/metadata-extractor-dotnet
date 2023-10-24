@@ -630,6 +630,11 @@ namespace MetadataExtractor
         // Custom format reference: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
         private static readonly string[] _datePatterns =
         {
+            "R", //RFC 1123
+            "ddd dd MMM yyyy HH':'mm':'ss zzz", //RFC 5322
+            "ddd dd MMM yyyy HH':'mm':'sszzz", //RFC 3339
+            "ddd dd MMM yyyy HH':'mm':'ss", //RFC 822, 1036
+            "ddd MMM dd HH':'mm':'ss yyyy", // GNU DATE
             "yyyy:MM:dd HH:mm:ss.fff",
             "yyyy:MM:dd HH:mm:ss.fffzzz",
             "yyyy:MM:dd HH:mm:ss",
